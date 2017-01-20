@@ -45,7 +45,8 @@ def save_html(data, socket, item_checker=None):
     spider = project.spiders[data['spider']]
     samples = spider.samples
     sample = samples[data['sample']]
-    return _update_sample(data, socket, sample)
+    _update_sample(data, socket, sample)
+    return {'ok': True}
 
 
 @open_tab
